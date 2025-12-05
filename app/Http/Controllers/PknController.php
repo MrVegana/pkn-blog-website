@@ -30,6 +30,14 @@ class PknController extends Controller
                 'bukti_pembelajaran' => 'Diskusi kelas, tugas esai singkat tentang pemilu.',
                 'refleksi' => 'Saya melihat pentingnya partisipasi aktif dalam pemilu dan diskusi publik.'
             ],
+            [
+                'minggu' => 3,
+                'judul' => 'Struktur Negara dan Lembaga-lembaga Pemerintahan',
+                'pertanyaan_inti' => 'Bagaimana struktur pemerintahan Indonesia mendukung demokrasi?',
+                'ringkasan' => 'Membahas fungsi dan peran lembaga-lembaga negara.',
+                'bukti_pembelajaran' => 'Diagram struktur pemerintahan, presentasi kelompok.',
+                'refleksi' => 'Saya memahami bagaimana lembaga-lembaga negara bekerja sama untuk menjalankan fungsi pemerintahan.'      
+            ],
             // nanti bisa tambah minggu lainnya
         ];
 
@@ -64,10 +72,7 @@ class PknController extends Controller
 
     public function refleksi()
     {
-        $refleksiAkhir = "
-               return view('refleksi', compact('refleksiAkhir'));
-   }
-        Saya merasa modul PKN ini sangat relevan dengan kondisi sosial-politik saat ini. 
+        $refleksiAkhir = " Saya merasa modul PKN ini sangat relevan dengan kondisi sosial-politik saat ini. 
         Saya belajar banyak tentang pentingnya hak dan kewajiban sebagai warga negara, 
         serta bagaimana demokrasi berfungsi di Indonesia. 
         Karya-karya yang saya buat selama modul ini membantu saya mengaplikasikan konsep-konsep yang telah dipelajari.
