@@ -219,7 +219,7 @@
         body.dark-mode h1, body.dark-mode h2, body.dark-mode h3,
         body.dark-mode h4, body.dark-mode h5, body.dark-mode h6,
         body.dark-mode strong, body.dark-mode b {
-            color: #fff !important;
+            color: #ffffffff !important;
         }
 
         body.dark-mode .text-muted {
