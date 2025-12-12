@@ -304,7 +304,7 @@
                     <span class="badge bg-primary bg-opacity-10 text-primary mb-3 px-3 py-2 rounded-pill">
                         Portofolio UAS Semester 3
                     </span>
-                    <h1 class="display-4 mb-3">Pendidikan Kewarganegaraan & <br><span class="text-primary">Informatika</span></h1>
+                    <h1 class="display-4 mb-3">Blog <br><span class="text-primary">Pendidikan Kewarganegaraan</span></h1>
                     <p class="lead mb-4">
                         Halo, saya <strong>Justin Christian Adam</strong>. Selamat datang di ruang digital saya.
                         Website ini mendokumentasikan perjalanan pembelajaran saya, mulai dari modul mingguan, proyek kreatif, hingga refleksi akhir.
