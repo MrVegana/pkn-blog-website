@@ -144,7 +144,7 @@ public function showcase()
             'jenis' => 'Podcast',
             'tipe'  => 'youtube',
             'video_id' => 'mmXRWM3RZPY',
-            'deskripsi' => 'Video ini adalah episode podcast yang membahas sejarah peristiwa 1998 di Indonesia...',
+            'deskripsi' => 'Dalam episode podcast spesial ini, kami mengupas tuntas sejarah kelam peristiwa Mei 1998 yang menjadi titik balik demokrasi Indonesia. Melalui diskusi mendalam bersama aktivis politik, video ini tidak hanya merefleksikan kronologi kejadian, tetapi juga menggali fakta-fakta krusial yang jarang dibicarakan. Tujuannya adalah merawat ingatan kolektif generasi muda agar sejarah tidak terulang dan semangat reformasi tetap hidup.',
             'link' => 'https://www.youtube.com/watch?v=mmXRWM3RZPY',
         ],
         [
@@ -153,14 +153,16 @@ public function showcase()
             'tipe'  => 'gdoc', // <— pakai viewer Google Docs
             'viewer' => 'https://docs.google.com/document/d/16peGty3N0EUGYVYlDV3Hvuv9nNGmPGZo/preview',
             // ubah /edit?... jadi /preview di link kamu
-            'deskripsi' => 'Penelitian ini membahas tentang praktik revisi sejarah dan ancaman terhadap demokrasi...',
+            'deskripsi' => 'Artikel ilmiah ini menyajikan analisis kritis terhadap fenomena penyangkalan (denial) dan upaya revisi sejarah terkait tragedi pemerkosaan massal Mei 1998, dengan studi kasus pada pernyataan tokoh politik Fadli Zon. Penelitian ini menelaah bagaimana distorsi sejarah dapat mengikis fondasi demokrasi, mengaburkan fakta pelanggaran HAM berat, serta memengaruhi kesadaran publik tentang keadilan dan kebenaran di era informasi digital.',
         ],
         [
-            'judul' => 'REVISI SEJARAH DAN ANCAMAN DEMOKRASI KASUS PENYANGKALAN PEMERKOSAAN MASSAL 1998 OLEH FADLI ZON',
-            'jenis' => 'Proposal Penelitian',
-            'tipe'  => 'gdoc',
-            'viewer' => 'https://docs.google.com/document/d/1ywRRCu-O6glt-MoRVUQ9Nydp7erHgLrwErMNgE-14rA/preview',
-            'deskripsi' => 'Penyangkalan terhadap peristiwa pemerkosaan massal Tragedi Mei 1998, yang dicetuskan oleh tokoh politik...',
+            'judul' => 'TRAGEDI REVISI 1998 (Infografis)',
+            'tipe' => 'canva', // Tipe baru khusus Canva
+            'jenis' => 'Infografis',
+             // Perhatikan: Saya sudah ubah ujung linknya dari /edit menjadi /view?embed
+            'embed_url' => 'https://www.canva.com/design/DAG4dueJODA/FEr7sb0xSxv7F4lZ9-w8sA/view?embed',
+            'deskripsi' => 'Infografis interaktif ini memvisualisasikan data kuantitatif mengenai tingkat literasi sejarah mahasiswa terhadap isu revisi sejarah 1998. Disajikan dengan desain visual yang menarik, karya ini merangkum temuan survei lapangan ke dalam grafik dan diagram yang mudah dipahami. Fokus utamanya adalah memperlihatkan korelasi antara pemahaman sejarah yang benar dengan pembentukan sikap demokratis dan kritis pada Generasi Z.',
+            'link' => null, // Kosongkan saja jika tidak ada link luar
         ],
     ];
 
@@ -169,11 +171,15 @@ public function showcase()
 
     public function refleksi()
     {
-        $refleksiAkhir = " Selama mengikuti mata kuliah Pendidikan Kewarganegaraan, saya semakin memahami bahwa menjadi warga negara Indonesia tidak hanya sekadar status administratif, tetapi sebuah identitas yang membawa tanggung jawab moral dan sosial. Berbagai materi mengenai hak dan kewajiban warga negara, nilai demokrasi, konstitusi, serta hak asasi manusia membantu saya melihat hubungan antara teori yang dipelajari dengan kondisi nyata di negara kita. Pemahaman ini memperluas cara pandang saya bahwa pemenuhan hak harus sejalan dengan pelaksanaan kewajiban, dan keduanya hanya dapat berjalan seimbang jika masyarakat memiliki kesadaran bernegara yang baik.
+        $refleksiAkhir = "Selama satu semester mengikuti mata kuliah Pendidikan Kewarganegaraan, pandangan saya tentang arti menjadi warga negara Indonesia telah mengalami transformasi yang mendalam. Awalnya, saya melihat kewarganegaraan hanya sebatas status administratif dalam KTP. Namun, melalui rangkaian pembelajaran dan tugas proyek yang saya kerjakan, saya menyadari bahwa identitas sebagai warga negara membawa konsekuensi moral dan tanggung jawab sosial yang besar, terutama bagi saya sebagai mahasiswa Informatika.
 
-Selain itu, pembelajaran mengenai demokrasi dan perubahan sosial memberikan wawasan baru tentang peran generasi muda dalam menjaga keberlanjutan sistem demokrasi Indonesia. Saya menyadari bahwa partisipasi politik bukan hanya tentang memilih saat pemilu, tetapi juga meliputi keberanian untuk menyuarakan pendapat, menghargai perbedaan, serta menghindari penyebaran informasi yang tidak benar. Materi mengenai tantangan demokrasi di era digital juga mengingatkan saya untuk lebih bijak dalam menggunakan teknologi, terutama sebagai mahasiswa Informatika yang kelak berperan dalam pengembangan teknologi dan sistem informasi. Tanggung jawab etis menjadi sangat penting agar teknologi yang kita ciptakan tidak mengancam nilai-nilai demokrasi dan hak asasi manusia.
+Proses pengerjaan proyek kreatif, khususnya saat membuat Podcast mengenai Sejarah 1998 dan Artikel Ilmiah tentang ancaman revisi sejarah, menjadi titik balik bagi kesadaran demokrasi saya. Saat meneliti dan mendiskusikan bagaimana fakta sejarah bisa diputarbalikkan oleh kepentingan politik, saya belajar bahwa demokrasi bukan sesuatu yang terberi (taken for granted), melainkan harus terus diperjuangkan dan dijaga kebenarannya. Sebagai calon ahli teknologi, saya menyadari betapa berbahayanya jika teknologi informasi digunakan untuk memanipulasi sejarah dan data demi kepentingan segelintir pihak. Hal ini mengajarkan saya bahwa integritas data adalah bagian dari integritas bangsa.
 
-Secara keseluruhan, mata kuliah ini memberikan dampak yang signifikan dalam membentuk sikap dan kesadaran kewarganegaraan saya. Sebelum mengikuti perkuliahan, saya memandang PKn hanya sebagai mata kuliah teori, tetapi kini saya memahami bahwa nilai-nilai yang diajarkan sangat relevan dengan kehidupan sehari-hari. Saya menjadi lebih reflektif terhadap peran saya sebagai bagian dari masyarakat, lebih peka terhadap isu-isu kebangsaan, dan lebih termotivasi untuk berkontribusi secara positif bagi lingkungan sekitar. Refleksi ini menjadi dasar bagi saya untuk terus belajar, bersikap kritis, dan berperilaku sebagai warga negara yang bertanggung jawab di era modern.";
+Lebih jauh lagi, dalam proses membangun Website Portofolio ini menggunakan framework Laravel, saya tidak hanya belajar tentang sintaks kode, tetapi juga tentang bagaimana menyajikan informasi publik yang edukatif dan aksesibel. Saya memahami bahwa di era digital, \"wilayah\" negara tidak hanya daratan dan lautan, tetapi juga ruang siber (cyberspace). Menjaga kedaulatan digital Indonesia berarti memastikan bahwa teknologi yang kita bangun memiliki fondasi etika yang kuat, tidak bias, dan melindungi hak asasi penggunanya.
+
+Pembelajaran mengenai tantangan demokrasi di era digital menyadarkan saya bahwa baris kode yang saya tulis memiliki dampak nyata. Algoritma bisa memperkuat demokrasi atau justru memecah belah masyarakat melalui filter bubble dan hoaks. Oleh karena itu, saya merasa memiliki tanggung jawab profesi untuk menerapkan \"Kode Etik Insinyur Digital\": menciptakan teknologi yang humanis, memecahkan masalah sosial, dan menjunjung tinggi nilai-nilai Pancasila.
+
+Secara keseluruhan, mata kuliah ini telah mengubah mindset saya dari sekadar mahasiswa yang ingin jago coding, menjadi mahasiswa yang sadar bahwa keahlian teknis harus dibarengi dengan wawasan kebangsaan. Saya termotivasi untuk tidak hanya menjadi konsumen teknologi, tetapi menjadi kreator solusi digital yang berkontribusi positif bagi Indonesia. Refleksi ini menjadi komitmen awal saya untuk terus belajar, bersikap kritis terhadap isu sosial, dan mendedikasikan kemampuan IT saya untuk kemajuan bangsa dan negara.";
 
         return view('refleksi', compact('refleksiAkhir'));
     }

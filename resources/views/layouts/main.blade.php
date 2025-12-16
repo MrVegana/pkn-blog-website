@@ -28,6 +28,22 @@
             height: 100%;
             display: flex;
             flex-direction: column;
+            
+            /* --- UPDATE: Transisi Smooth untuk Body --- */
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        /* --- UPDATE: Transisi Smooth untuk Elemen Lain --- */
+        .navbar, .card, .floating-info-card, footer, .btn, .badge, .hero {
+            transition: background-color 0.5s ease, 
+                        border-color 0.5s ease, 
+                        color 0.5s ease, 
+                        box-shadow 0.5s ease !important;
+        }
+
+        /* Transisi untuk teks agar tidak kaget */
+        h1, h2, h3, h4, h5, h6, p, span, i, strong, b, .text-muted, .info-value, .info-label {
+             transition: color 0.5s ease !important;
         }
 
         .navbar {
@@ -42,7 +58,7 @@
 
         .nav-link {
             font-weight: 500;
-            transition: all 0.2s;
+            transition: all 0.2s; /* Transisi hover tetap cepat */
         }
 
         .nav-link:hover {
@@ -88,7 +104,8 @@
             object-fit: cover;
             border-radius: 30px;
             box-shadow: 15px 15px 40px rgba(13, 110, 253, 0.15);
-            transition: transform 0.3s ease;
+            /* Update transition untuk menyertakan box-shadow */
+            transition: transform 0.3s ease, box-shadow 0.5s ease;
         }
 
         .profile-box:hover {
@@ -131,7 +148,7 @@
             border-radius: 16px;
             background: var(--card-bg);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-            transition: transform 0.2s, box-shadow 0.2s;
+            /* Transition sudah dihandle di group selector atas, tapi bisa dipertegas disini jika perlu */
         }
 
         .card:hover {
@@ -145,7 +162,6 @@
             font-weight: 600;
             padding: 12px 28px;
             border-radius: 12px;
-            transition: all 0.3s;
         }
 
         .btn-brand:hover {
@@ -243,6 +259,15 @@
             color: #64748b;
         }
 
+        /* Fix floating card in dark mode */
+        body.dark-mode .floating-info-card {
+            background: rgba(30, 41, 59, 0.9);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        body.dark-mode .info-value {
+            color: #ffffff;
+        }
+
         @media (max-width: 991px) {
             .hero {
                 text-align: center;
@@ -296,6 +321,7 @@
         </div>
     </nav>
 
+    {{-- HERO SECTION: Hanya muncul di Halaman Home --}}
     @if(request()->routeIs('home'))
     <section class="hero">
         <div class="container">
@@ -321,12 +347,8 @@
 
                 <div class="col-lg-5 text-center mt-5 mt-lg-0 fade-in-up" style="animation-delay: 0.2s">
                     <div class="profile-wrapper">
-                        
-                        {{-- <img src="{{ asset('public/images/justin.jpeg') }}" alt="Justin Christian Adam" class="profile-box"> --}}
-
-
-                        <div class="profile-box" style="background: linear-gradient(135deg, #ff0000ff 0%, #ff0000ff 100%);"></div>
-
+                        {{-- Ganti URL gambar di sini jika perlu --}}
+                        <div class="profile-box" style="background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);"></div>
 
                         <div class="floating-info-card">
                             <div class="d-flex align-items-start gap-3 mb-4">
@@ -354,13 +376,14 @@
                                 </div>
                             </div>
                         </div>
-                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     @endif
 
+    {{-- KONTEN UTAMA --}}
     <main class="main-content py-5">
         <div class="container">
             @if(!request()->routeIs('home'))
@@ -375,6 +398,101 @@
             @yield('content')
         </div>
     </main>
+     {{-- BAGIAN BAWAH HOME (Hanya muncul di halaman Home) --}}
+    @if(request()->routeIs('home'))
+    
+        {{-- 1. KODE ETIK INSINYUR DIGITAL (Dikembalikan) --}}
+        <section class="py-5 my-5" style="background: linear-gradient(to bottom, rgba(13, 110, 253, 0.05), transparent); border-radius: 24px;">
+            <div class="container py-4">
+                <div class="row justify-content-center text-center mb-5">
+                    <div class="col-lg-8">
+                        <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 rounded-pill px-3 py-2 mb-3 fw-semibold">
+                            <i class="bi bi-terminal me-2"></i>Core Values
+                        </span>
+                        <h2 class="fw-bold display-6 mb-3">Kode Etik <span class="text-primary">Insinyur Digital</span></h2>
+                        <p class="lead text-muted">
+                            Mengintegrasikan prinsip kebangsaan ke dalam setiap baris kode untuk menciptakan teknologi yang bertanggung jawab dan bermanfaat bagi Indonesia.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    {{-- Card 1 --}}
+                    <div class="col-md-4 d-flex">
+                        <div class="card h-100 w-100 border-0 shadow-sm p-4 rounded-4" style="background: var(--card-bg); transition: all 0.3s; border: 1px solid rgba(255,255,255,0.05);">
+                            <div class="mb-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary rounded-3" style="width: 64px; height: 64px;">
+                                    <i class="bi bi-shield-lock-fill fs-2"></i>
+                                </div>
+                            </div>
+                            <h4 class="fw-bold mb-3">Etika & Integritas Digital</h4>
+                            <p class="text-muted mb-0">
+                                Memahami implikasi hukum (UU ITE) dan moral dalam pengembangan perangkat lunak. Menjaga privasi data pengguna dan mencegah penyalahgunaan teknologi.
+                            </p>
+                        </div>
+                    </div>
+
+                    {{-- Card 2 --}}
+                    <div class="col-md-4 d-flex">
+                        <div class="card h-100 w-100 border-0 shadow-sm p-4 rounded-4" style="background: var(--card-bg); transition: all 0.3s; border: 1px solid rgba(255,255,255,0.05);">
+                            <div class="mb-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-danger bg-opacity-10 text-danger rounded-3" style="width: 64px; height: 64px;">
+                                    <i class="bi bi-globe-asia-australia fs-2"></i>
+                                </div>
+                            </div>
+                            <h4 class="fw-bold mb-3">Nasionalisme di Era Siber</h4>
+                            <p class="text-muted mb-0">
+                                Berkontribusi pada kedaulatan digital bangsa dengan menciptakan solusi teknologi lokal yang inovatif dan berdaya saing global.
+                            </p>
+                        </div>
+                    </div>
+
+                    {{-- Card 3 --}}
+                    <div class="col-md-4 d-flex">
+                        <div class="card h-100 w-100 border-0 shadow-sm p-4 rounded-4" style="background: var(--card-bg); transition: all 0.3s; border: 1px solid rgba(255,255,255,0.05);">
+                            <div class="mb-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-success bg-opacity-10 text-success rounded-3" style="width: 64px; height: 64px;">
+                                    <i class="bi bi-people-fill fs-2"></i>
+                                </div>
+                            </div>
+                            <h4 class="fw-bold mb-3">Tanggung Jawab Sosial</h4>
+                            <p class="text-muted mb-0">
+                                Menggunakan keahlian teknis untuk memecahkan masalah sosial dan membangun teknologi yang inklusif, aksesibel, dan berkeadilan bagi seluruh masyarakat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    @endif
+
+    {{-- BAGIAN BAWAH HOME (Hanya muncul di halaman Home) --}}
+    @if(request()->routeIs('home'))
+        
+        {{-- 1. KUTIPAN REFLEKSI (TETAP ADA DI PALING BAWAH) --}}
+        <section class="py-5 mb-4">
+            <div class="container">
+                <div class="p-5 rounded-4 text-center" style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: white; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                    {{-- Tanda Kutip Besar --}}
+                    <div style="position: absolute; top: -10px; right: 20px; font-size: 150px; opacity: 0.1; font-family: serif; line-height: 1;">“</div>
+
+                    <div class="row justify-content-center position-relative" style="z-index: 1;">
+                        <div class="col-lg-9">
+                            <blockquote class="blockquote mb-0">
+                                <p class="fs-4 fw-medium mb-4 lh-base font-monospace" style="font-family: 'Plus Jakarta Sans', sans-serif !important; letter-spacing: -0.5px;">
+                                    "Nasionalisme di era modern bukan lagi soal mengangkat senjata, tetapi bagaimana kita menggunakan keahlian teknologi kita untuk memajukan bangsa dan menjaga kedaulatan digital."
+                                </p>
+                                <footer class="blockquote-footer text-white-50 mt-2" style="font-size: 0.9rem;">
+                                    Refleksi <cite title="Source Title" class="text-white fst-italic fw-bold">Mahasiswa Informatika</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    @endif
 
     <footer class="text-center">
         <div class="container">
